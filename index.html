@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalistic website template | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JustHomka</h1>
+            <p>Minecraft plugin and web developer</p>
+        </header>
+        <nav>
+            <button class="nav-buttons" onclick="redirecttohome()">Home</button>
+            <button class="nav-buttons" onclick="redirecttogames()">Games</button>
+        </nav>
+        <section>
+            <h2>Section</h2>
+            <p>Sample text</p>
+        </section>
+        <section>
+            <h2>Section with tags</h2>
+            <div class="tag-selector">
+                <button class="tag-button" onclick="filterByTag('all')">All</button>
+                <button class="tag-button" onclick="filterByTag('Python')">Python</button>
+                <button class="tag-button" onclick="filterByTag('HTML5')">HTML5</button>
+                <button class="tag-button" onclick="filterByTag('Other')">Other</button>
+            </div>
+            <ul class="repository-list">
+                <li data-tags="HTML5">
+                    <a href="https://github.com/JustHomka/justhomka.github.io" target="_blank">HTML5 | justhomka.github.io</a>
+                    <p>Main website ; Written on HTML, CSS and JavaScript</p>
+                </li>
+                <li data-tags="HTML5">
+                    <a href="https://github.com/JustHomka/minimalistic-website-template" target="_blank">HTML5 | minimalistic-website-template</a>
+                    <p>This template</p>
+                </li>
+            </ul>
+        </section>
+        <footer>
+            <p>Template author GitHub: @JustHomka</p>
+        </footer>
+    </div>
+
+    <script>
+        function filterByTag(tag) {
+            const repositoryItems = document.querySelectorAll('.repository-list li');
+            repositoryItems.forEach(item => {
+                if (tag === 'all' || item.dataset.tags.includes(tag)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        function redirecttohome() {
+            window.location.href = "https://justhomka.github.io/minimalistic-website-template"
+        }
+        function redirecttogames() {
+            window.location.href = "page2.html";
+        }
+    </script>
+</body>
+</html>

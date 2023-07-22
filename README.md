@@ -3,6 +3,8 @@
 
 template version of https://justhomka.github.io/
 
+Mobile support✅
+
 ---
 
 ## Branches info

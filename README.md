@@ -6,6 +6,6 @@ template version of https://justhomka.github.io/
 ---
 
 ## Branches info
-main - main branch with all features, used for GitHub Pages
+**main** - main branch with all features, used for GitHub Pages
 
-one-page - branch with one page version of website
+**one-page** - branch with one page version of website
